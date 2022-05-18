@@ -54,7 +54,7 @@ public class BackgroundController {
         String newName = sduId + endWith;
         try {
             file.transferTo(new File(folder, newName));
-            String url = "backgrounds/" + newName;
+            String url = req.getScheme() + "://" + "www.lianxin-start.cn" + ":"  + req.getServerPort() + "/backgrounds/" + newName;
             result.put("status","success");
             result.put("url",url);
             Backgrounds backgrounds = new Backgrounds();
